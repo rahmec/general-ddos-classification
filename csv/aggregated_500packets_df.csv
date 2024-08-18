@@ -1,4 +1,4 @@
-byte_rate,packet_rate,avg_flow_number,avg_deltatime,source_entropy,destination_entropy,s-port_entropy,d_port_entropy,synack_ratio,modbus_rate,tcp_rate,ping_rate,other_rate,label
+byte_rate,packet_rate,avg_flow_number,avg_deltatime,source_entropy,destination_entropy,s-port_entropy,d-port_entropy,synack_ratio,modbus_rate,tcp_rate,ping_rate,other_rate,label
 1297.711594252575,19.859082334841844,60.784,0.05035479400000001,0.014,0.018,0.026,0.026,0.04017857142857143,0.34,0.592,0.0,0.068,0
 1257.0186643807365,19.185852199101568,183.592,0.05212339,0.012,0.016,0.028,0.028,0.0400890868596882,0.35,0.584,0.0,0.066,0
 1258.50594521652,19.216178238815736,307.924,0.05203998,0.014,0.016,0.022,0.022,0.035398230088495575,0.354,0.584,0.0,0.062,0

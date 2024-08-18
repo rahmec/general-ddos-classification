@@ -1,6 +1,7 @@
 import pandas as pd
 import threading
-
+import time
+from multiprocessing import Pool
 
 def add_flow_number_column(pcap_df):
   pcap_df['Flow'] = pcap_df['Source'] + '->' + pcap_df['Destination']
@@ -110,9 +111,6 @@ modbusflood_df['Label'] = 3
 
 dfs = [clean_df, tcpsynflood_df, pingflood_df, modbusflood_df]
 
-#for df in dfs:
-#    add_flow_number_column(df)
-
 packet_seq_lengths = [10,20,50,100,250,500]
 time_seq_lengths = [1,2,5,10,30]
 threads = []
@@ -125,6 +123,7 @@ for thread in threads:
     thread.start()
 for thread in threads:
     thread.join()
+start = time.time()
 print("Generating threads")
 threads = []
 for seq_length in packet_seq_lengths:
@@ -139,4 +138,6 @@ for thread in threads:
 print("Waiting until all threads are done")
 for thread in threads:
     thread.join()
+end = time.time()
 print("CSV created!")
+print(f"Execution time: {end-start} seconds")
